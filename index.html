@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Slider</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #0066ff;
+        }
+        .container{
+            max-width: 800px;
+            margin: 250px auto;
+            display: flex;
+            justify-content: center;
+            transform: perspective(150px);
+            transform-style: preserve-3d;
+        }
+        .card-wrap{
+            margin: 2px;
+        }
+        .card{
+            width: 150px;
+            height: 150px;
+        }
+
+        .card-wrap:nth-child(1) .card{
+            background: violet;  
+        }
+        .card-wrap:nth-child(2) .card{
+            background: orangered;  
+        }
+
+        .card-wrap:nth-child(3) .card{
+            background: red;  
+        }
+
+        .card-wrap:nth-child(4) .card{
+            background: greenyellow;  
+        }
+        .card-wrap:nth-child(5) .card{
+            background: yellow;  
+        }
+
+        .card-wrap:nth-child(1){
+            transform: translate3d(0%, 0px, 10px);
+            animation: gofront1 15s ease-in-out 1s infinite;
+        }
+        .card-wrap:nth-child(2){
+            transform: translate3d(0%, 0px, 40px);
+            animation: gofront2 15s ease-in-out 1s infinite;
+        }
+        .card-wrap:nth-child(3){
+            transform: translate3d(0%, 0px, 60px);
+            animation: gofront3 15s ease-in-out 1s infinite;
+        }
+        .card-wrap:nth-child(4){
+            transform: translate3d(0%, 0px, 40px);
+            animation: gofront4 15s ease-in-out 1s infinite;
+        }
+        .card-wrap:nth-child(5){
+            transform: translate3d(0%, 0px, 10px);
+            animation: gofront5 15s ease-in-out 1s infinite;
+        }
+
+        @keyframes gofront1{
+            0%{ transform: translate3d(0%, 0px, 10px); }
+            20%{   transform: translate3d(100%, 0px, 40px);}
+            40%{   transform: translate3d(200%, 0px, 60px);}
+            60%{   transform: translate3d(300%, 0px, 40px);}
+            80%{   transform: translate3d(400%, 0px, 10px);}
+            100%{   transform: translate3d(0%, 0px, 10px);}
+        }
+
+        @keyframes gofront2{
+            0%{ transform: translate3d(0%, 0px, 40px); }
+            20%{   transform: translate3d(100%, 0px, 60px);}
+            40%{   transform: translate3d(200%, 0px, 40px);}
+            60%{   transform: translate3d(300%, 0px, 10px);}
+            80%{   transform: translate3d(-100%, 0px, 10px);}
+            100%{   transform: translate3d(0%, 0px, 40px);}
+        }
+
+        @keyframes gofront3{
+            0%{ transform: translate3d(0%, 0px, 60px); }
+            20%{   transform: translate3d(100%, 0px, 40px);}
+            40%{   transform: translate3d(200%, 0px, 10px);}
+            60%{   transform: translate3d(-200%, 0px, 10px);}
+            80%{   transform: translate3d(-100%, 0px, 40px);}
+            100%{   transform: translate3d(0%, 0px, 60px);}
+        }
+
+        @keyframes gofront4{
+            0%{ transform: translate3d(0%, 0px, 40px); }
+            20%{   transform: translate3d(100%, 0px, 10px);}
+            40%{   transform: translate3d(-300%, 0px, 10px);}
+            60%{   transform: translate3d(-200%, 0px, 40px);}
+            80%{   transform: translate3d(-100%, 0px, 60px);}
+            100%{   transform: translate3d(0%, 0px, 40px);}
+        }
+
+        @keyframes gofront5{
+            0%{ transform: translate3d(0%, 0px, 10px); }
+            20%{   transform: translate3d(-400%, 0px, 10px);}
+            40%{   transform: translate3d(-300%, 0px, 40px);}
+            60%{   transform: translate3d(-200%, 0px, 60px);}
+            80%{   transform: translate3d(-100%, 0px, 40px);}
+            100%{   transform: translate3d(0%, 0px, 10px);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1 -->
+        <div class="card-wrap">
+            <div class="card"></div> 
+        </div>
+        <!-- 2 -->
+        <div class="card-wrap">
+            <div class="card"></div> 
+        </div>
+        <!-- 3 -->
+        <div class="card-wrap">
+            <div class="card"></div> 
+        </div>
+        <!-- 4 -->
+        <div class="card-wrap">
+            <div class="card"></div> 
+        </div>
+        <!-- 5 -->
+        <div class="card-wrap">
+            <div class="card"></div> 
+        </div>
+
+    </div>
+</body>
+</html>
